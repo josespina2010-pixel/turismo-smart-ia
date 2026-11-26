@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Leaflet map container and custom curatorial popup adjustments */
+.leaflet-container {
+  font-family: var(--font-sans);
+  background-color: #ebe6df;
+  z-index: 1;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem;
+  border: 1px solid #e7e5e4;
+  box-shadow: 0 10px 25px -5px rgba(28, 25, 23, 0.12);
+  padding: 0;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  min-width: 220px;
+}
+
+.leaflet-popup-tip {
+  box-shadow: none;
+  border: 1px solid #e7e5e4;
+}
